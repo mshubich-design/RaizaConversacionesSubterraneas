@@ -1,0 +1,66 @@
+:root{
+    --color-claro:#f4f1e6;
+    --color-oscuro:#0f231a;
+    --color-acento:#738d64;
+
+    --txt-body:Helvetica, sans-serif;
+    --txt-titulo: Adelle-sans;
+
+    --font-size-name:40pt;
+    --font-size-sub: 17pt;
+    --font-size-info:13pt;
+}
+
+h2{
+    font-family: var(--txt-titulo);
+    font-size: var(--font-size-name);
+    color: var(--color-claro);
+    font-weight: 600;
+    margin: 0;
+}
+
+h3{
+    font-family: var(--txt-body);
+    font-size: var(--font-size-sub);
+    font-weight: 600;
+    color: var(--color-claro);
+    margin-bottom: 0;
+}
+
+p{
+    font-family: var(--txt-body);
+    font-size: var(--font-size-info);
+    line-height: 2;
+    font-weight: 100;
+    color: var(--color-claro);
+    margin: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 15px;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: width 0.4s, height 0.4s;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.imagen--gigante {
+    grid-column: span 2;
+    grid-row: span 2;
+    
+}
