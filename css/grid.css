@@ -10,7 +10,9 @@
     --font-size-sub: 17pt;
     --font-size-info:13pt;
 }
-
+* {
+    box-sizing: border-box;
+}
 h2{
     font-family: var(--txt-titulo);
     font-size: var(--font-size-name);
@@ -49,6 +51,22 @@ p{
     padding: 5px;
     box-sizing: border-box;
     transition: width 0.4s, height 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta {
+    transform: translate(0, 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 35, 26, 0.8);
+    padding: 10px;
+    transition: all 200ms ease-in-out;
+}
+.imagen--gigante .tarjeta {
+    display: block;
+    transform: translate(0%, 0%);
 }
 
 .imagen img {
