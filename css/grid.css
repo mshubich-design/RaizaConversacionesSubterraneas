@@ -63,7 +63,8 @@ p{
     display: none;
 }
 
-.tarjeta {
+.tarjeta
+ {
     transform: translate(0, 100%);
     position: absolute;
     display: flex;
