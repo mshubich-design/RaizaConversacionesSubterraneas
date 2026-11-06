@@ -54,19 +54,112 @@ p{
     position: relative;
     overflow: hidden;
 }
+
+.tarjeta.activa {
+    display: block;
+}
+
+.oculto {
+    display: none;
+}
+
 .tarjeta {
     transform: translate(0, 100%);
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(15, 35, 26, 0.8);
+    background-color: var(--color-oscuro);
     padding: 10px;
     transition: all 200ms ease-in-out;
+
 }
+
+       /* @media screen and (min-witdth: 1920px){
+            .tarjeta-hongo{
+                width: 90%;
+                min-height: 300px;
+                padding: 40px;
+                border-radius: 120px;
+            }*/
+    
+
+    /* BLOQUE 1: TÃTULO */
+    .tarjeta-header {
+        text-align: center;
+    }
+
+    /* BLOQUE 2: IMAGEN + INFORMACIÃ“N */
+    .tarjeta-contenido {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 5px;
+        height: auto;
+
+    }
+
+    /* IMAGEN */
+    .tarjeta-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+    }
+
+    /* INFORMACIÃ“N */
+    .tarjeta-informacion {
+        display: flex;
+        flex-direction: column;
+        
+        gap: 7px;
+    }
+
+    .descripcion {
+        text-align: justify;
+        font-style: italic;
+    }
+
+    /* DATOS */
+    .datos-hongo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    /* CONEXIÃ“N */
+    .tarjeta-conexion {
+        border-top: 2px solid #F5F0E5;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+.tarjeta-hongo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-oscuro);
+}
+
 .imagen--gigante .tarjeta {
-    display: block;
     transform: translate(0%, 0%);
+    display: grid;    
+}
+
+.imagen--gigante .tarjeta-hongo {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
 }
 
 .imagen img {
@@ -76,9 +169,10 @@ p{
     display: block;
 }
 
-
-.imagen--gigante {
+.imagen--gigante{
     grid-column: span 2;
     grid-row: span 2;
-    
+    position: relative;
 }
+
+
