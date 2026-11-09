@@ -45,3 +45,20 @@ imagenes.forEach(imagen => {
 
 });
 
+
+function setupTheme() {
+    const toggle = document.getElementById("themeToggle");
+    const label = document.getElementById("themeLabel");
+    const saved = localStorage.getItem("raiza-theme");
+    setTheme(saved === "dark" ? "dark" : "light");
+    toggle.addEventListener("click", () => {
+      setTheme(root.dataset.theme === "light" ? "dark" : "light");
+    });
+    function setTheme(theme) {
+      root.dataset.theme = theme;
+      label.textContent = theme === "light" ? "BOSQUE" : "SUBSUELO";
+      document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#05180d" : "#f1f2e0";
+      localStorage.setItem("raiza-theme", theme);
+    }
+  }
+

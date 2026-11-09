@@ -31,7 +31,9 @@ html[data-theme="dark"] {
   --panel: #0e231a;
   --shadow: rgba(0, 0, 0, .32);
 }
+
 * { box-sizing: border-box; }
+
 html, body { width: 100%; min-height: 100%; margin: 0; }
 body {
   min-height: 100vh;
