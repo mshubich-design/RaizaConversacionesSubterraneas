@@ -300,7 +300,6 @@
     const modal = document.getElementById("galleryModal");
     const open = () => { modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); };
     const close = () => { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); };
-    document.getElementById("galleryButton").addEventListener("click", open);
     document.getElementById("galleryClose").addEventListener("click", close);
     document.getElementById("galleryBackdrop").addEventListener("click", close);
     document.addEventListener("keydown", event => { if (event.key === "Escape") close(); });

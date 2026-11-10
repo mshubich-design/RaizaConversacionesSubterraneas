@@ -1,7 +1,7 @@
 RAIZA — SITIO UNIFICADO
 
 ARCHIVOS PRINCIPALES
-- home.html: portada y experiencia principal.
+- ./: portada y experiencia principal.
 - redes.html: red subterránea interactiva y galería.
 - redes.js / redes.css: interacción y estilos de la red.
 - raiza_base_datos_completa.json: datos de hongos y relaciones.
@@ -9,7 +9,7 @@ ARCHIVOS PRINCIPALES
 - fonts/ y assets/: tipografías e imagen de la portada.
 
 NAVEGACIÓN
-- El hongo del encabezado lleva a home.html.
+- El hongo del encabezado lleva a ./.
 - RED SUBTERRÁNEA lleva a redes.html.
 - En redes.html, IMÁGENES SUBTERRÁNEAS abre la galería.
 - El botón de tema conserva el cambio BOSQUE / SUBSUELO.
@@ -20,7 +20,7 @@ COLORES COMPARTIDOS
 - Verde oscuro: #0e231a
 
 PARA ABRIR EL SITIO
-Por seguridad del navegador, abre la carpeta con un servidor local (por ejemplo, Live Server en Visual Studio Code) y entra a home.html.
+Por seguridad del navegador, abre la carpeta con un servidor local (por ejemplo, Live Server en Visual Studio Code) y entra a ./.
 La red carga D3 desde CDN y consulta raiza_base_datos_completa.json de forma local; por ello requiere conexión a internet para D3 y un servidor local para cargar los datos.
 
 ACTUALIZACIÓN DE LA RED
