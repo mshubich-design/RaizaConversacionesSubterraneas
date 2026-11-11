@@ -1,50 +1,69 @@
-const tarjetas = document.querySelectorAll('.tarjeta-hongo');
+const grid = document.querySelector('.grid');
 const contenedorTarjetas = document.querySelector('.tarjetas-info');
-const imagenes = document.querySelectorAll('.imagen');
+const imagenes = Array.from(document.querySelectorAll('.imagen'));
+const tarjetas = Array.from(document.querySelectorAll('.tarjeta-hongo'));
 
-imagenes.forEach(imagen => {
+let activeImagen = null;
 
-    imagen.addEventListener('click', () => {
-        let activeImagen = document.querySelector('.imagen--gigante');
-        if (activeImagen && activeImagen !== imagen) {
-            activeImagen.classList.remove('imagen--gigante');
+function resetActiveCard() {
+    const imagenActiva = document.querySelector('.imagen--gigante');
+    if (!imagenActiva) return;
 
-            const tarjetaAnterior = activeImagen.querySelector('.tarjeta-hongo');
+    imagenActiva.classList.remove('imagen--gigante');
+    const tarjetaActiva = imagenActiva.querySelector('.tarjeta-hongo');
+    if (tarjetaActiva) {
+        tarjetaActiva.classList.add('oculto');
+        contenedorTarjetas.appendChild(tarjetaActiva);
+    }
+}
 
-            if (tarjetaAnterior) {
-                contenedorTarjetas.appendChild(tarjetaAnterior);
-                tarjetaAnterior.classList.add('oculto');
-            }
-        }
+function updateGridLayout() {
+    if (!grid) return;
 
-        const estabaGrande = imagen.classList.contains('imagen--gigante');
-        imagen.classList.toggle('imagen--gigante');
-
-        const idHongo = imagen.dataset.hongo;
-
-        const tarjetaActual = Array.from(tarjetas).find(tarjeta => {
-            return tarjeta.dataset.hongo === idHongo;
+    const items = Array.from(grid.children).filter(node => node.classList && node.classList.contains('imagen'));
+    requestAnimationFrame(() => {
+        items.forEach(item => {
+            item.style.gridColumn = '';
+            item.style.gridRow = '';
         });
 
-        if (tarjetaActual) {
+        if (activeImagen) {
+            activeImagen.style.gridColumn = 'span 2';
+            activeImagen.style.gridRow = 'span 2';
+        }
+    });
+}
 
-            if (estabaGrande) {
-                // Si se reduce la imagen, regresar y ocultar la tarjeta
-                contenedorTarjetas.appendChild(tarjetaActual);
-                tarjetaActual.classList.add('oculto');
+imagenes.forEach(imagen => {
+    imagen.addEventListener('click', () => {
+        const idHongo = imagen.dataset.hongo;
+        const tarjetaHongo = tarjetas.find(tarjeta => tarjeta.dataset.hongo === idHongo);
 
-            } else {
-                // Si crece la imagen, colocar la tarjeta encima
-                tarjetaActual.classList.remove('oculto');
-                imagen.appendChild(tarjetaActual);
-            }
-
+        if (activeImagen && activeImagen !== imagen) {
+            resetActiveCard();
         }
 
+        const estaActiva = imagen.classList.contains('imagen--gigante');
+
+        if (estaActiva) {
+            imagen.classList.remove('imagen--gigante');
+            if (tarjetaHongo) {
+                tarjetaHongo.classList.add('oculto');
+                contenedorTarjetas.appendChild(tarjetaHongo);
+            }
+            activeImagen = null;
+        } else {
+            imagen.classList.add('imagen--gigante');
+            if (tarjetaHongo) {
+                tarjetaHongo.classList.remove('oculto');
+                imagen.appendChild(tarjetaHongo);
+            }
+            activeImagen = imagen;
+        }
+
+        updateGridLayout();
     });
-
 });
-
 
 function setupTheme() {
     const toggle = document.getElementById("themeToggle");
@@ -61,4 +80,6 @@ function setupTheme() {
       localStorage.setItem("raiza-theme", theme);
     }
   }
+
+updateGridLayout();
 
