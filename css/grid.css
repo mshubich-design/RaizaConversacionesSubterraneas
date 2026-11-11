@@ -237,14 +237,132 @@ p{
 
 /* MÓVIL */
 @media (max-width: 480px) {
-    :root {
+     :root {
         --font-size-name: 23px;
         --font-size-sub: 16px;
         --font-size-info: 14px;
     }
+
+    h2{
+    font-family: var(--txt-titulo);
+    font-size: var(--font-size-name);
+    color: var(--color-claro);
+    line-height: 1;
+    font-weight: 600;
+    margin: 0;
+    }
+
+    p{
+    font-family: var(--txt-body);
+    font-size: var(--font-size-info);
+    line-height: 1.5;
+    font-weight: 100;
+    color: var(--color-claro);
+    margin: 0;
+    }
+
+    /* RETÍCULA PRINCIPAL */
     .grid {
         grid-template-columns: 1fr;
     }
+
+    /* IMAGEN/TARJETA AMPLIADA */
+.imagen--gigante {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    grid-column: span 1;
+    grid-row: span 1;
+    z-index: 10;
+    padding: 0;
+    overflow: hidden;
 }
 
+/* OCULTAR LA FOTO */
+.imagen--gigante .tarjeta-imagen {
+    display: none;
+}
 
+/* TARJETA */
+.imagen--gigante .tarjeta-hongo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    /* HEADER */
+    .tarjeta-header {
+        width: 100%;
+        text-align: center;
+        flex-shrink: 0;
+        padding: 0;
+    }
+
+    /* CONTENIDO */
+    .tarjeta-contenido {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        min-height: 0;
+    }
+
+    /* INFORMACIÓN */
+    .tarjeta-informacion {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .descripcion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .datos-hongo {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .dato {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dato h3,
+    .dato p {
+        text-align: center;
+    }
+
+    /* CONEXIÓN */
+    .tarjeta-conexion {
+        width: 90%;
+        text-align: center;
+    }
+
+    .tarjeta-conexion h3,
+    .tarjeta-conexion p {
+        text-align: center;
+    }
+    
+}
