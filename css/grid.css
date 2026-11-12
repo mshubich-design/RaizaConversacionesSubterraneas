@@ -10,8 +10,6 @@
     --font-size-sub: 17pt;
     --font-size-info:13pt;
 
-    --header-height: clamp(55px, 5.1vw, 82px);
-    --u:min(calc(100vw / 1068),1.8px); 
 }
 
 html[data-theme="dark"] {
@@ -139,7 +137,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0;
 }
 
 .tarjeta-contenido {
@@ -216,7 +214,7 @@ p{
     :root {
         --font-size-name: 32px;
         --font-size-sub: 20px;
-        --font-size-info: 16px;
+        --font-size-info: 13px;
     }
     .grid {
         grid-template-columns: repeat(3, 1fr);
@@ -226,7 +224,7 @@ p{
     font-family: var(--txt-titulo);
     font-size: var(--font-size-name);
     color: var(--color-claro);
-    line-height: 1;
+    line-height: 1.5;
     font-weight: 600;
     margin: 0;
     }
@@ -256,7 +254,7 @@ p{
     font-family: var(--txt-titulo);
     font-size: var(--font-size-name);
     color: var(--color-claro);
-    line-height: 1;
+    line-height: 1.5;
     font-weight: 600;
     margin: 0;
     }
@@ -307,7 +305,7 @@ p{
      :root {
         --font-size-name: 23px;
         --font-size-sub: 16px;
-        --font-size-info: 14px;
+        --font-size-info: 15px;
     }
 
     h2{
