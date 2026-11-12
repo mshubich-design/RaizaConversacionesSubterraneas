@@ -205,14 +205,14 @@ p{
 }
 
 /* COMPUTADORA */
-@media (min-width: 1025px) {
+@media (min-width: 1201px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* TABLET HORIZONTAL */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* TABLET GRANDE */
+@media (min-width: 901px) and (max-width: 1200px) {
     :root {
         --font-size-name: 32px;
         --font-size-sub: 20px;
@@ -221,10 +221,28 @@ p{
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    h2{
+    font-family: var(--txt-titulo);
+    font-size: var(--font-size-name);
+    color: var(--color-claro);
+    line-height: 1;
+    font-weight: 600;
+    margin: 0;
+    }
+
+    p{
+    font-family: var(--txt-body);
+    font-size: var(--font-size-info);
+    line-height: 1;
+    font-weight: 100;
+    color: var(--color-claro);
+    margin: 0;
+    }
 }
 
-/* TABLET VERTICAL */
-@media (min-width: 481px) and (max-width: 768px) {
+/* TABLET REGULAR */
+@media (min-width: 701px) and (max-width: 900px) {
     :root {
         --font-size-name: 28px;
         --font-size-sub: 18px;
@@ -233,7 +251,56 @@ p{
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    h2{
+    font-family: var(--txt-titulo);
+    font-size: var(--font-size-name);
+    color: var(--color-claro);
+    line-height: 1;
+    font-weight: 600;
+    margin: 0;
+    }
+
+    p{
+    font-family: var(--txt-body);
+    font-size: var(--font-size-info);
+    line-height: 1;
+    font-weight: 100;
+    color: var(--color-claro);
+    margin: 0;
+    }
 }
+
+/* TABLET PEQUELÑA */
+@media (min-width: 481px) and (max-width: 700px) {
+    :root {
+        --font-size-name: 28px;
+        --font-size-sub: 18px;
+        --font-size-info: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2{
+    font-family: var(--txt-titulo);
+    font-size: var(--font-size-name);
+    color: var(--color-claro);
+    line-height: 1;
+    font-weight: 600;
+    margin: 0;
+    }
+
+    p{
+    font-family: var(--txt-body);
+    font-size: var(--font-size-info);
+    line-height: 1;
+    font-weight: 100;
+    color: var(--color-claro);
+    margin: 0;
+    }
+}    
 
 /* MÓVIL */
 @media (max-width: 480px) {
