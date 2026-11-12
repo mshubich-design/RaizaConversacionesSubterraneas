@@ -254,7 +254,7 @@ p{
     font-family: var(--txt-titulo);
     font-size: var(--font-size-name);
     color: var(--color-claro);
-    line-height: 1.5;
+    line-height: 1;
     font-weight: 600;
     margin: 0;
     }
