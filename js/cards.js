@@ -20,16 +20,37 @@ function resetActiveCard() {
 function updateGridLayout() {
     if (!grid) return;
 
-    const items = Array.from(grid.children).filter(node => node.classList && node.classList.contains('imagen'));
+    const items = Array.from(grid.children).filter(
+        node => node.classList && node.classList.contains('imagen')
+    );
+
     requestAnimationFrame(() => {
+
+        /* Limpiar estilos puestos directamente por JavaScript */
         items.forEach(item => {
             item.style.gridColumn = '';
             item.style.gridRow = '';
         });
 
         if (activeImagen) {
-            activeImagen.style.gridColumn = 'span 2';
-            activeImagen.style.gridRow = 'span 2';
+
+            /* CELULAR: 1 columna × 2 filas */
+            if (window.innerWidth <= 480) {
+                activeImagen.style.gridColumn = '1';
+                activeImagen.style.gridRow = 'span 2';
+            }
+
+            /* TABLET PEQUEÑA / REGULAR: 2 columnas × 2 filas */
+            else if (window.innerWidth <= 900) {
+                activeImagen.style.gridColumn = 'span 2';
+                activeImagen.style.gridRow = 'span 2';
+            }
+
+            /* TABLET GRANDE Y COMPUTADORA: 2 columnas × 2 filas */
+            else {
+                activeImagen.style.gridColumn = 'span 2';
+                activeImagen.style.gridRow = 'span 2';
+            }
         }
     });
 }
