@@ -24,6 +24,8 @@ html[data-theme="dark"] {
 }
 
 html, body { width: 100%; min-height: 100%; margin: 0; }
+html, body { background: var(--color-claro); transition: background-color .5s ease; }
+
 
 h2{
     font-family: var(--txt-titulo);

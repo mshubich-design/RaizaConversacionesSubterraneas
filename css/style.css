@@ -5,12 +5,12 @@
 
 /* colores del layout */
 @property --bar{syntax:"<color>";inherits:true;initial-value:#738d66}
-@property --barink{syntax:"<color>";inherits:true;initial-value:#0e231a}
-@property --btn{syntax:"<color>";inherits:true;initial-value:#0e231a}
+@property --barink{syntax:"<color>";inherits:true;initial-value:#0f231a;}
+@property --btn{syntax:"<color>";inherits:true;initial-value:#0f231a;}
 @property --btnink{syntax:"<color>";inherits:true;initial-value:#f4f0e5}
 
 :root{
-  --bar:#738d66; --barink:#0e231a; --btn:#0e231a; --btnink:#f4f0e5;
+  --bar:#738d66; --barink:#0f231a;; --btn:#0f231a;; --btnink:#f4f0e5;
   --u:min(calc(100vw / 1068),1.8px);      
   --nav-h:calc(54.5 * var(--u));          
   --f-display:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif;

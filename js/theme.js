@@ -13,7 +13,7 @@
     root.setAttribute('data-theme', theme);
     var dark = theme === 'dark';
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', dark ? '#0e231a' : '#738d66');
+    if (meta) meta.setAttribute('content', dark ? '#0f231a;' : '#738d66');
     var buttons = document.querySelectorAll('.nav__toggle');
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].setAttribute('aria-pressed', dark);
