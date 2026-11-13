@@ -4,7 +4,7 @@
   color-scheme: light;
   --cream: #f4f0e5;
   --green: #738d66;
-  --deep: #0e231a;
+  --deep: #0f231a;
   --forest: var(--deep);
   --leaf: var(--green);
   --ink: var(--deep);
@@ -22,7 +22,7 @@ html[data-theme="dark"] {
   --paper: var(--deep);
   --line: rgba(244, 240, 229, .82);
   --muted: rgba(244, 240, 229, .62);
-  --panel: #0e231a;
+  --panel: #0f231a;
   --shadow: rgba(0, 0, 0, .32);
 }
 

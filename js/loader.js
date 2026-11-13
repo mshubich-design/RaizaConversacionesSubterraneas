@@ -3,7 +3,7 @@
    Al terminar quita la pantalla y lanza el evento 'raiza:loaded' (entonces aparece el popup). */
 (function () {
   var root = document.documentElement;
-  var BG = '#1e3029', CREAM = '#f4f0e5';
+  var BG = '#0f231a', CREAM = '#f4f0e5';
   var MIN_MS = 650, MAX_MS = 15000;
 
   var css = '#rzLoader{position:fixed;inset:0;z-index:100000;background:' + BG + ';display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3.4vh,34px);opacity:1;transition:opacity .45s ease;font-family:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif}' +

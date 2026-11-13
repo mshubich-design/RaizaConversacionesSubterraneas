@@ -17,7 +17,7 @@ NAVEGACIÓN
 COLORES COMPARTIDOS
 - Crema: #f4f0e5
 - Verde: #738d66
-- Verde oscuro: #0e231a
+- Verde oscuro: #0f231a
 
 PARA ABRIR EL SITIO
 Por seguridad del navegador, abre la carpeta con un servidor local (por ejemplo, Live Server en Visual Studio Code) y entra a ./.
