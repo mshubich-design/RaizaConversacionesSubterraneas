@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e231a">
+  <title>Raiza — Red subterránea</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ffk3trd.css">
+   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/redes.css">
+  <script src="./js/theme.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__left">
+      <a class="nav__mark" href="./" aria-label="Volver al inicio">
+        <img src="img/home/svg/hongo.svg" alt="Raiza">
+      </a>
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a class="nav__link nav__link--1 active" href="redes.html" aria-current="page">Red subterránea</a>
+        <a class="nav__link nav__link--2" href="banco.html">Banco de hongos</a>
+        <a class="nav__link nav__link--3" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+    <button class="nav__toggle theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+      <span id="themeLabel">Subsuelo</span>
+    </button>
+  </header>
+
+  <main class="page-main">
+    <section class="search-area" aria-label="Buscar en la red">
+      <label class="search-box" for="networkSearch">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        <input id="networkSearch" type="search" placeholder="Buscar hongo, relación o palabra..." autocomplete="off">
+        <button id="clearSearch" class="clear-search" type="button" aria-label="Limpiar búsqueda">×</button>
+      </label>
+      <p class="search-hint" id="searchStatus">Explora las conexiones subterráneas</p>
+    </section>
+
+    <section class="network-stage" id="networkStage" aria-label="Red interactiva de hongos y relaciones">
+      <svg id="networkSvg" role="img" aria-label="Conexiones entre hongos"></svg>
+      <div id="networkNodes" class="network-nodes"></div>
+      <div class="loading-state" id="loadingState">Cargando la red subterránea…</div>
+    </section>
+
+    <aside class="detail-panel" id="detailPanel" aria-live="polite" aria-label="Información del hongo">
+      <button class="detail-close" id="detailClose" type="button" aria-label="Cerrar información">×</button>
+      <p class="detail-kicker">REGISTRO DE LA RED</p>
+      <h2 id="detailName">Selecciona un hongo</h2>
+      <p id="detailDescription">Explora los nodos para descubrir sus relaciones.</p>
+      <div class="detail-meta">
+        <div><span>HÁBITAT</span><p id="detailHabitat">—</p></div>
+        <div><span>FUNCIÓN</span><p id="detailFunction">—</p></div>
+        <div><span>RELACIÓN</span><p id="detailRelation">—</p></div>
+      </div>
+      <div class="detail-connections">
+        <span>CONEXIONES</span>
+        <p id="detailConnections">—</p>
+      </div>
+    </aside>
+  </main>
+
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+    <div class="gallery-backdrop" id="galleryBackdrop"></div>
+    <section class="gallery-content" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+      <button class="gallery-close" id="galleryClose" type="button" aria-label="Cerrar galería">×</button>
+      <p class="detail-kicker">RAIZA / ARCHIVO VISUAL</p>
+      <h2 id="galleryTitle">Imágenes subterráneas</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="./js/redes.js"></script>
+</body>
+</html>
