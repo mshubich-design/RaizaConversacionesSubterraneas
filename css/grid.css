@@ -195,7 +195,7 @@ p{
 }
 
 .tarjeta-conexion {
-    border-top: 2px solid #F5F0E5;
+    border-top: 2px solid var(--color-claro);
     text-align: center;
     padding-top: 10px;
 }
