@@ -36,6 +36,9 @@
   let linkSelection;
   let selectedId = null;
 
+  const contenedorSugerencias = document.getElementById("sugerencias-busqueda");
+  let sugerencias = [];
+
   const number = value => Number(value);
   const clean = value => String(value ?? "").trim();
   const byId = (items, id) => items.find(item => number(item.id) === number(id));
@@ -45,6 +48,7 @@
       const response = await fetch(DATA_URL);
       if (!response.ok) throw new Error(`No se pudo cargar el JSON (${response.status})`);
       database = await response.json();
+      sugerencias = database.sugerencias_busqueda || [];
       buildGraph();
       buildGallery();
       setupTheme();
@@ -226,13 +230,68 @@
   }
 
   function setupSearch() {
-    searchInput.addEventListener("input", () => applySearch(searchInput.value));
-    clearSearch.addEventListener("click", () => {
-      searchInput.value = "";
-      applySearch("");
-      searchInput.focus();
+
+    function mostrarSugerencias() {
+
+        contenedorSugerencias.innerHTML = "";
+
+        sugerencias.forEach(palabra => {
+
+            const opcion = document.createElement("button");
+
+            opcion.type = "button";
+            opcion.textContent = palabra;
+
+            opcion.addEventListener("click", () => {
+                searchInput.value = palabra;
+                applySearch(palabra);
+                contenedorSugerencias.classList.remove("visible");
+            });
+
+            contenedorSugerencias.appendChild(opcion);
+        });
+
+        contenedorSugerencias.classList.add("visible");
+    }
+
+
+    // Mostrar sugerencias al seleccionar la barra
+    searchInput.addEventListener("focus", () => {
+        mostrarSugerencias();
     });
-  }
+
+
+    // Búsqueda normal al escribir
+    searchInput.addEventListener("input", () => {
+
+        contenedorSugerencias.classList.remove("visible");
+
+        applySearch(searchInput.value);
+    });
+
+
+    // Limpiar búsqueda
+    clearSearch.addEventListener("click", () => {
+
+        searchInput.value = "";
+
+        applySearch("");
+
+        searchInput.focus();
+
+        mostrarSugerencias();
+    });
+
+
+    // Ocultar al hacer clic fuera de la barra
+    document.addEventListener("click", (e) => {
+
+        if (!e.target.closest(".search-box")) {
+            contenedorSugerencias.classList.remove("visible");
+        }
+
+    });
+}
 
   function applySearch(value) {
     if (!nodeSelection) return;

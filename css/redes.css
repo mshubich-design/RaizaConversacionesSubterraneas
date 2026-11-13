@@ -281,6 +281,48 @@ html[data-theme="dark"] .search-box {
 }
 .gallery-item span { font-size: 11px; }
 
+.search-box {
+    position: relative;
+}
+
+#sugerencias-busqueda {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--green);
+    padding: 8px 0;
+    border-radius: 0 0 10px 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+#sugerencias-busqueda.visible {
+    display: block;
+}
+
+#sugerencias-busqueda button {
+    display: block;
+    width: 100%;
+    padding: 9px 16px;
+    border: none;
+    background: transparent;
+    color: var(--deep);
+    text-align: left;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#sugerencias-busqueda button:hover {
+    background-color: rgba(14, 35, 26, 0.12);
+}
+
+
 @media (max-width: 700px) {
   body { overflow: hidden; }
   .site-header { grid-template-columns: 52px minmax(0, 1fr) 88px; }

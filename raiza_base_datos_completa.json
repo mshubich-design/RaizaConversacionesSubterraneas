@@ -1042,5 +1042,27 @@
       "hongo_id": 11,
       "funcion_id": 12
     }
-  ]
+  ],
+
+  "sugerencias_busqueda": [
+    "directa",
+    "indirecta",
+    "Pino",
+    "Hongo",
+    "Suelo",
+    "Micelio",
+    "Árbol",
+    "Monotrompa uniflora",
+    "Madera",
+    "Nutrientes",
+    "Líquen",
+    "Ecosistema",
+    "Materia orgánica",
+    "Plantas",
+    "micorrisas",
+    "descomposición",
+    "redes miceloi",
+    "Musgo",
+    "raíces"
+]
 }
