@@ -1,0 +1,83 @@
+/* RAIZA · home (index.html). La barra superior viene de style.css y las tipografías de fonts.css. */
+/* colores que cambian suavemente entre bosque (claro) y subsuelo (oscuro) */
+/* 3 colores clave (de la imagen de referencia): crema #f4f0e5 · verde #738d66 · oscuro #0e231a */
+@property --bg{syntax:"<color>";inherits:true;initial-value:#f4f0e5}
+@property --ink{syntax:"<color>";inherits:true;initial-value:#0e231a}
+@property --green{syntax:"<color>";inherits:true;initial-value:#738d66}
+@property --rule{syntax:"<color>";inherits:true;initial-value:#0e231a}
+@property --bar{syntax:"<color>";inherits:true;initial-value:#738d66}
+@property --barink{syntax:"<color>";inherits:true;initial-value:#0e231a}
+@property --btn{syntax:"<color>";inherits:true;initial-value:#0e231a}
+@property --btnink{syntax:"<color>";inherits:true;initial-value:#f4f0e5}
+:root{
+  --cream:#f4f0e5; --green0:#738d66; --deep:#0e231a;
+  --bg:var(--cream); --ink:var(--deep); --green:var(--green0); --rule:var(--deep); --bar:var(--green0); --barink:var(--deep); --btn:var(--deep); --btnink:var(--cream);
+  --u:min(calc(100vw / 1068),1.8px);          /* 1u = 1px del diseño de 1068 px */
+  --f-display:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-text:"RZ Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  transition:--bg .7s ease,--ink .7s ease,--green .7s ease,--rule .7s ease,--bar .7s ease,--barink .7s ease,--btn .7s ease,--btnink .7s ease;
+}
+:root[data-theme="dark"]{--bg:var(--deep);--ink:var(--cream);--rule:var(--cream);--btn:var(--cream);--btnink:var(--deep)}
+
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-text);overflow-x:clip;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wrap{max-width:calc(1068 * var(--u));margin:0 auto;position:relative}
+
+/* ───────── página: columna principal + columna del bosque ───────── */
+.page{display:grid;grid-template-columns:808fr 260fr}
+:root{--shift:636}
+.main{position:relative;overflow-x:clip;min-height:calc(1949 * var(--u))}
+.strip{margin:0;line-height:0}
+.strip img{display:block;width:100%;height:auto}
+
+/* ───────── raíces: logo.svg → LOGORAIZAextendido → raíces extendidas (se revelan con el scroll) ───────── */
+.roots{will-change:transform;transform:translateZ(0);position:absolute;left:0;top:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:hidden}
+.roots svg{display:block;width:100%;height:100%}
+.rz-a path,.rz-ext{fill:var(--ink)}
+.rz-gen path{fill:none;stroke:url(#rzGenG);stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1;stroke-dashoffset:1;visibility:hidden}
+.rz-a{animation:rzIn 1.4s ease .15s both}
+@keyframes rzIn{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.rz-a{animation:none}}
+
+/* ───────── textos ───────── */
+/* halo del color de fondo: mantiene legible el texto sobre las raíces */
+.h1,.sub,.lead,.h2,.body{margin:0;text-shadow:0 0 calc(1.2 * var(--u)) var(--bg),0 0 calc(1.2 * var(--u)) var(--bg),0 0 calc(2.6 * var(--u)) var(--bg),0 0 calc(2.6 * var(--u)) var(--bg),0 0 calc(5 * var(--u)) var(--bg)}
+.copy{position:relative;z-index:3;translate:0 calc(-1 * var(--shift) * var(--u))}
+.h1{position:absolute;left:calc(28 * var(--u));top:calc(1077.4 * var(--u));font-family:var(--f-display);font-weight:900;font-size:calc(73 * var(--u));line-height:calc(87 * var(--u));letter-spacing:var(--ls-h1,-.026em);color:var(--green);text-transform:uppercase;white-space:nowrap}
+.sub{position:absolute;left:calc(33 * var(--u));top:calc(1257.4 * var(--u));font-family:var(--f-text);font-weight:700;font-style:italic;font-size:calc(27.5 * var(--u));line-height:calc(30 * var(--u));letter-spacing:var(--ls-sub,0em)}
+.lead{position:absolute;left:calc(34 * var(--u));top:calc(1567 * var(--u));font-family:var(--f-display);font-weight:700;font-size:calc(44 * var(--u));line-height:calc(53 * var(--u));letter-spacing:var(--ls-lead,.004em);text-transform:uppercase;white-space:nowrap}
+.lead em{font-style:italic}
+.g{color:var(--green)}
+.rule{position:absolute;left:calc(36 * var(--u));top:calc(1923.5 * var(--u));width:calc(747 * var(--u));height:max(1px,calc(1.2 * var(--u)));background:var(--rule);border:0;margin:0}
+.h2{position:absolute;left:calc(34 * var(--u));top:calc(1948 * var(--u));font-family:var(--f-display);font-weight:800;font-size:calc(44 * var(--u));line-height:calc(53 * var(--u));letter-spacing:var(--ls-h2,-.022em);color:var(--green);text-transform:uppercase}
+.body{position:absolute;left:calc(37 * var(--u));top:calc(2023.4 * var(--u));font-family:var(--f-text);font-weight:400;font-size:calc(21 * var(--u));line-height:calc(27 * var(--u));letter-spacing:var(--ls-body,-.02em)}
+.body{width:calc(747 * var(--u));max-width:calc(747 * var(--u))}
+
+/* ───────── botón hongo + «CLICK FOR TOP» (vuelven arriba) ───────── */
+.hongo{position:absolute;z-index:4;left:calc(354 * var(--u));bottom:calc(52.3 * var(--u));width:calc(109 * var(--u));height:calc(106.2 * var(--u));transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.hongo svg{display:block;width:100%;height:100%;overflow:visible}
+.hongo path{fill:var(--ink)}
+.hongo:hover{transform:rotate(18deg) scale(1.06)}
+.hongo:focus-visible{outline:2px solid var(--green);outline-offset:6px}
+.hint{position:absolute;z-index:4;left:calc(408.5 * var(--u));bottom:calc(15 * var(--u));transform:translateX(-50%);display:flex;align-items:center;gap:max(6px,calc(11 * var(--u)));margin:0;padding:max(2px,calc(4 * var(--u))) 0;background:none;border:0;cursor:pointer;color:var(--ink);font-family:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:max(8.5px,calc(12 * var(--u)));line-height:1;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.hint svg{display:block;width:max(9px,calc(14 * var(--u)));height:auto;overflow:visible;animation:hintBob 1.15s ease-in-out infinite}
+.hint svg:last-child{animation-delay:.2s}
+.hint:hover svg{animation-duration:.7s}
+.hint:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:3px}
+@keyframes hintBob{0%,100%{transform:translateY(max(2px,calc(4 * var(--u))));opacity:.45}50%{transform:translateY(calc(-1 * max(2px,calc(4 * var(--u)))));opacity:1}}
+@media (prefers-reduced-motion:reduce){.hint svg{animation:none}}
+
+/* ───────── móvil ───────── */
+@media (max-width:900px){
+  :root{--u:calc(100vw / 1068)}
+  .copy{translate:0 calc(-1 * var(--shift) * var(--u))}
+  .hongo{bottom:calc(102.8 * var(--u))}
+  .hint{bottom:calc(65 * var(--u))}
+  .body{font-size:max(8.2px,calc(21 * var(--u)))}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

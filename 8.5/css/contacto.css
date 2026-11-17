@@ -1,0 +1,54 @@
+/* RAIZA · Contacto */
+@font-face{font-family:"RZ Display";font-weight:800;font-style:normal;font-display:swap;src:url(../fonts/display-800.woff) format("woff")}
+@font-face{font-family:"RZ Display";font-weight:900;font-style:normal;font-display:swap;src:url(../fonts/display-900.woff) format("woff")}
+@font-face{font-family:"RZ Text";font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/text-400.woff) format("woff")}
+
+:root{--cream:#f4f0e5;--green:#738d66;--deep:#0e231a;--ink:var(--deep);--paper:var(--cream)}
+:root[data-theme="dark"]{--ink:var(--cream);--paper:var(--deep)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);transition:background-color .6s ease,color .6s ease}
+body{min-height:100vh;font-family:"RZ Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+
+.ct{width:100%;max-width:calc(1068 * var(--u));margin:0 auto}
+.ct-stage{position:relative;width:100%;height:calc(675 * var(--u))}
+
+.ct-title{position:absolute;left:calc(70 * var(--u));top:calc(62 * var(--u));margin:0;font-family:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:900;font-size:calc(124 * var(--u));line-height:1;letter-spacing:-.025em;text-transform:uppercase;white-space:nowrap}
+.ct-line{position:absolute;margin:0;border:0;height:max(1px,calc(1.3 * var(--u)));background:var(--ink)}
+.ct-line--1{left:calc(74 * var(--u));top:calc(205 * var(--u));width:calc(876 * var(--u))}
+.ct-line--2{left:calc(74 * var(--u));top:calc(280 * var(--u));width:calc(394 * var(--u))}
+.ct-sub{position:absolute;left:calc(72 * var(--u));top:calc(224 * var(--u));margin:0;font-family:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:calc(20 * var(--u));letter-spacing:-.005em;text-transform:uppercase;color:var(--green);white-space:nowrap}
+
+.ct-list{position:absolute;left:0;top:0;margin:0;padding:0;list-style:none}
+.ct-row{position:absolute;left:0;height:calc(34 * var(--u));width:calc(520 * var(--u))}
+.ct-row:nth-child(1){top:calc(380 * var(--u))}
+.ct-row:nth-child(2){top:calc(442 * var(--u))}
+.ct-row:nth-child(3){top:calc(507 * var(--u))}
+.ct-name{position:absolute;left:calc(82 * var(--u));top:50%;transform:translateY(-50%);font-size:calc(19.5 * var(--u));white-space:nowrap}
+.ct-ic{position:absolute;top:50%;transform:translateY(-50%);display:block;color:var(--green);transition:opacity .2s ease,transform .2s ease}
+.ct-ic svg{display:block;width:100%;height:100%;fill:currentColor}
+.ct-ic:hover{opacity:.7;transform:translateY(-50%) scale(1.1)}
+.ct-ic:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:4px}
+.ct-ig{left:calc(327 * var(--u));width:calc(26 * var(--u));height:calc(26 * var(--u))}
+.ct-mail{left:calc(404 * var(--u));width:calc(33 * var(--u));height:calc(26 * var(--u))}
+
+.ct-faces{position:absolute;left:calc(574 * var(--u));top:calc(252 * var(--u));width:calc(340 * var(--u));height:auto;fill:var(--ink);stroke:var(--ink);stroke-width:1.5}
+.ct-centro{position:absolute;left:calc(893 * var(--u));top:calc(632 * var(--u));width:calc(90 * var(--u));height:auto;fill:var(--green)}
+
+/* móvil: columna */
+@media (max-width:900px){
+  .ct-stage{height:auto;padding:clamp(34px,9vw,56px) 24px 48px;display:flex;flex-direction:column}
+  .ct-stage>*{position:static}
+  .ct-title{text-align:center;font-size:clamp(34px,13.2vw,92px);margin:0 0 clamp(14px,3.4vw,22px)}
+  .ct-line{width:100%;height:1.5px;margin:0}
+  .ct-line--2{width:58%;align-self:center}
+  .ct-sub{text-align:center;font-size:clamp(13px,3.9vw,19px);margin:clamp(12px,3.4vw,18px) 0 clamp(12px,3.4vw,18px);white-space:normal}
+  .ct-list{display:grid;grid-template-columns:max-content max-content max-content;justify-content:center;align-items:center;column-gap:clamp(12px,4vw,20px);row-gap:clamp(18px,5vw,26px);margin:clamp(30px,8vw,44px) 0 0}
+  .ct-row{display:contents}
+  .ct-name{position:static;transform:none;font-size:clamp(16px,4.8vw,21px)}
+  .ct-ic{position:static;transform:none}
+  .ct-ic:hover{transform:scale(1.1)}
+  .ct-ig{width:32px;height:32px}
+  .ct-mail{width:40px;height:32px}
+  .ct-faces{width:min(86%,420px);align-self:center;margin:clamp(56px,17vw,110px) 0 8px}
+  .ct-centro{width:clamp(92px,28vw,130px);align-self:flex-end;margin-top:clamp(30px,9vw,52px)}
+}

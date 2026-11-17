@@ -1,0 +1,1046 @@
+{
+  "hongos": [
+    {
+      "id": 1,
+      "nombre": "suillus granulatus",
+      "foto": "suillus-granulatus.jpg",
+      "relacion": "directa",
+      "descripcion": "Hongo microrrícico asociado principalmente con pinos"
+    },
+    {
+      "id": 2,
+      "nombre": "suillussp",
+      "foto": "suillus-sp.jpg",
+      "relacion": "directa",
+      "descripcion": "Hongo microrrícico asociado con las raíces de los pinos"
+    },
+    {
+      "id": 3,
+      "nombre": "inocybe geophylla",
+      "foto": "inocybe-geophylla.jpg",
+      "relacion": "directa",
+      "descripcion": "Hongo micorricíco asociado con las raíces de los árboles"
+    },
+    {
+      "id": 4,
+      "nombre": "monotrompa uniflora",
+      "foto": "monotrompa-uniflora.jpg",
+      "relacion": "directa",
+      "descripcion": "Planta micoheterótrofa que obtiene nutrientes mediante hongos asociados a las raíces de los árboles"
+    },
+    {
+      "id": 5,
+      "nombre": "tomitopsis",
+      "foto": "tomitopsis-sp.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo descomponedor que crece sobre madera y ayuda a reciclar nutrientes"
+    },
+    {
+      "id": 6,
+      "nombre": "mycena seynesii",
+      "foto": "mycena-seynesii.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo descomponedor que crece sobre piñas de pino caídas y ayuda a reciclar nutrientes"
+    },
+    {
+      "id": 7,
+      "nombre": "coprinelus domesticus",
+      "foto": "coprinelus-domesticus.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo descomponedor de madera orgánica"
+    },
+    {
+      "id": 8,
+      "nombre": "poliporo",
+      "foto": "poliporo.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo descomponedor de madera muerta"
+    },
+    {
+      "id": 9,
+      "nombre": "tulostoma brumale",
+      "foto": "tulostoma-brumale.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo gasteroide que libera sus esporas atravéz de una avertura  con su parte superior"
+    },
+    {
+      "id": 10,
+      "nombre": "simocybe haustellaris",
+      "foto": "simocybe-haustellaris.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo descomponedor que crece sobre madera muerta y restos vegetales"
+    },
+    {
+      "id": 11,
+      "nombre": "fomitopsis mouceae",
+      "foto": "fomitopsis-mouceae.jpg",
+      "relacion": "indirecta",
+      "descripcion": "Hongo saprófito que descompone la madera de árboles muertos, principalmente coníferas, como abetos y píceas."
+    },
+    {
+      "id": 12,
+      "nombre": "patismatia glauca",
+      "foto": "patismatia-glauca.jpg",
+      "relacion": "indirecto",
+      "descripcion": "Liquen simbionte que crece sobre troncos y ramas de árboles"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "tag": "Pino ↔ hongo ↔ suelo"
+    },
+    {
+      "id": 2,
+      "tag": "Pino → hongo → micelio → suelo"
+    },
+    {
+      "id": 3,
+      "tag": "Hongo → raíces → red de micelio"
+    },
+    {
+      "id": 4,
+      "tag": "Árbol → hongo → Monotropa uniflora"
+    },
+    {
+      "id": 5,
+      "tag": "Madera → hongo → nutrientes → suelo"
+    },
+    {
+      "id": 6,
+      "tag": "Piña → hongo → nutrientes → suelo"
+    },
+    {
+      "id": 7,
+      "tag": "Madera → hongo → nutrientes → suelo"
+    },
+    {
+      "id": 8,
+      "tag": "Madera → hongo → nutrientes → suelo → árboles"
+    },
+    {
+      "id": 9,
+      "tag": "Materia orgánica → hongo → suelo → plantas"
+    },
+    {
+      "id": 10,
+      "tag": "Madera → hongo → nutrientes → plantas"
+    },
+    {
+      "id": 11,
+      "tag": "Árbol  → hongo → madera →  suelo."
+    },
+    {
+      "id": 12,
+      "tag": "Árbol → líquen → ecosistema"
+    }
+  ],
+  "relaciones": [
+    {
+      "hongo_id": 1,
+      "tag_id": 2,
+      "comparten_relacion": "Pino"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 6,
+      "comparten_relacion": "Pino"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 2,
+      "comparten_relacion": "Pino"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 3,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 4,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 5,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 6,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 7,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 2,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 5,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 6,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 7,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 8,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 9,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 1,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 6,
+      "comparten_relacion": "Pino"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 3,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 4,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 5,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 6,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 7,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 3,
+      "comparten_relacion": "Micelio"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 5,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 6,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 7,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 8,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 9,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 2,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 4,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 5,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 6,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 7,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 3,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 11,
+      "comparten_relacion": "Árbol"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 12,
+      "comparten_relacion": "Árbol"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 5,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 6,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 7,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 4,
+      "tag_id": 4,
+      "comparten_relacion": "Monotrompa uniflora"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 7,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 8,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 10,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 11,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 6,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 7,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 6,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 7,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 8,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 10,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 6,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 7,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 8,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 9,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 5,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 7,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 7,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 8,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 10,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 7,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 8,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 9,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 6,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 8,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 10,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 11,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 8,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 8,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 10,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 8,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 9,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 7,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 10,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 11,
+      "comparten_relacion": "Madera"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 9,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 10,
+      "comparten_relacion": "Nutrientes"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 9,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 11,
+      "comparten_relacion": "Árbol"
+    },
+    {
+      "hongo_id": 8,
+      "tag_id": 12,
+      "comparten_relacion": "Árbol"
+    },
+    {
+      "hongo_id": 9,
+      "tag_id": 9,
+      "comparten_relacion": "Materia orgánica"
+    },
+    {
+      "hongo_id": 9,
+      "tag_id": 10,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 9,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 9,
+      "tag_id": 11,
+      "comparten_relacion": "Suelo"
+    },
+    {
+      "hongo_id": 9,
+      "tag_id": 10,
+      "comparten_relacion": "Plantas"
+    },
+    {
+      "hongo_id": 10,
+      "tag_id": 11,
+      "comparten_relacion": "Hongo"
+    },
+    {
+      "hongo_id": 11,
+      "tag_id": 12,
+      "comparten_relacion": "Árbol"
+    },
+    {
+      "hongo_id": 12,
+      "tag_id": 12,
+      "comparten_relacion": "Líquen"
+    },
+    {
+      "hongo_id": 12,
+      "tag_id": 12,
+      "comparten_relacion": "Ecosistema"
+    }
+  ],
+  "procesos": [
+    {
+      "id": 1,
+      "funcion": "micorrisas",
+      "proceso": "Conecta con las raíces para intercambiar agua, nutrientes y carbono."
+    },
+    {
+      "id": 2,
+      "funcion": "micorrisas",
+      "proceso": "Forma asociaciones con las raíces de los pinos para obtener agua y nutrientes."
+    },
+    {
+      "id": 3,
+      "funcion": "micorrisas",
+      "proceso": "Forma micorrizas con árboles y ayuda en la obtención de agua y nutrientes."
+    },
+    {
+      "id": 4,
+      "funcion": "micorrisas",
+      "proceso": "Obtiene recursos a través de hongos asociados con las raíces de los árboles."
+    },
+    {
+      "id": 5,
+      "funcion": "descomposición",
+      "proceso": "Descompone la madera y ayuda a devolver sus nutrientes al suelo."
+    },
+    {
+      "id": 6,
+      "funcion": "descomposición",
+      "proceso": "Descompone materia vegetal y ayuda a reciclar sus nutrientes hacia el suelo."
+    },
+    {
+      "id": 7,
+      "funcion": "descomposición",
+      "proceso": "Degrada materia orgánica y ayuda a liberar nutrientes que regresan al suelo."
+    },
+    {
+      "id": 8,
+      "funcion": "descomposición",
+      "proceso": "Descompone la madera y participa en el ciclo del carbono y el reciclaje de nutrientes."
+    },
+    {
+      "id": 9,
+      "funcion": "descomposición",
+      "proceso": "Descompone materia orgánica y contribuye al reciclaje de nutrientes dentro del ecosistema."
+    },
+    {
+      "id": 10,
+      "funcion": "descomposición",
+      "proceso": "Degrada materia vegetal y facilita el regreso de nutrientes al suelo."
+    },
+    {
+      "id": 11,
+      "funcion": "descomposición",
+      "proceso": "Descompone la madera y transforma sus componentes en nutrientes que regresan al suelo."
+    },
+    {
+      "id": 12,
+      "funcion": "redes miceloi",
+      "proceso": "Asociación donde el hongo aporta agua y protección, y el organismo produce nutrientes."
+    }
+  ],
+  "habitats": [
+    {
+      "id": 1,
+      "nombre": "Árboles",
+      "descripcion": "Bosques, principalmente asociado con pinos."
+    },
+    {
+      "id": 2,
+      "nombre": "Musgo",
+      "descripcion": "Suelo de bosque, musgo y materia vegetal."
+    },
+    {
+      "id": 3,
+      "nombre": "Árboles y suelo",
+      "descripcion": "Suelo de zonas boscosas, cerca de árboles."
+    },
+    {
+      "id": 4,
+      "nombre": "Árboles y suelo",
+      "descripcion": "Suelo, asociada a hongos micorrícicos y raíces de árboles."
+    },
+    {
+      "id": 5,
+      "nombre": "Árboles",
+      "descripcion": "Árboles y madera."
+    },
+    {
+      "id": 6,
+      "nombre": "Árboles",
+      "descripcion": "Piñas de pino caídas."
+    },
+    {
+      "id": 7,
+      "nombre": "Madera",
+      "descripcion": "Madera y materia orgánica en descomposición."
+    },
+    {
+      "id": 8,
+      "nombre": "Madera",
+      "descripcion": "Madera muerta y troncos."
+    },
+    {
+      "id": 9,
+      "nombre": "Suelo",
+      "descripcion": "Suelos secos y arenosos, principalmente en zonas abiertas y con poca vegetación."
+    },
+    {
+      "id": 10,
+      "nombre": "Madera",
+      "descripcion": "Madera muerta y restos vegetales."
+    },
+    {
+      "id": 11,
+      "nombre": "Árboles",
+      "descripcion": "Bosques de coníferas y bosques mixtos. Crece sobre troncos, ramas y tocones de árboles muertos."
+    },
+    {
+      "id": 12,
+      "nombre": "Árboles y musgo",
+      "descripcion": "Troncos y ramas de árboles, principalmente en zonas boscosas."
+    }
+  ],
+  "hongo_proceso": [
+    {
+      "hongo_id": 1,
+      "funcion_id": 1
+    },
+    {
+      "hongo_id": 1,
+      "funcion_id": 3
+    },
+    {
+      "hongo_id": 1,
+      "funcion_id": 4
+    },
+    {
+      "hongo_id": 1,
+      "funcion_id": 5
+    },
+    {
+      "hongo_id": 1,
+      "funcion_id": 6
+    },
+    {
+      "hongo_id": 1,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 1,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 2,
+      "funcion_id": 3
+    },
+    {
+      "hongo_id": 2,
+      "funcion_id": 4
+    },
+    {
+      "hongo_id": 2,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 3,
+      "funcion_id": 4
+    },
+    {
+      "hongo_id": 3,
+      "funcion_id": 5
+    },
+    {
+      "hongo_id": 3,
+      "funcion_id": 6
+    },
+    {
+      "hongo_id": 3,
+      "funcion_id": 9
+    },
+    {
+      "hongo_id": 3,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 3,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 4,
+      "funcion_id": 5
+    },
+    {
+      "hongo_id": 4,
+      "funcion_id": 6
+    },
+    {
+      "hongo_id": 4,
+      "funcion_id": 9
+    },
+    {
+      "hongo_id": 4,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 4,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 5,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 5,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 6,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 6,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 1
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 3
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 4
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 5
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 6
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 8
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 10
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 7,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 1
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 3
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 4
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 5
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 6
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 10
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 8,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 1
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 3
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 4
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 5
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 6
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 11
+    },
+    {
+      "hongo_id": 10,
+      "funcion_id": 12
+    },
+    {
+      "hongo_id": 11,
+      "funcion_id": 12
+    }
+  ]
+}
