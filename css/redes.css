@@ -9,10 +9,10 @@
   --leaf: var(--green);
   --ink: var(--deep);
   --paper: var(--cream);
-  --line: rgba(14, 35, 26, .78);
-  --muted: rgba(14, 35, 26, .62);
+  --line: rgb(15, 35, 26);
+  --muted: rgba(15, 35, 26);
   --panel: #f4f0e5;
-  --shadow: rgba(14, 35, 26, .12);
+  --shadow: rgba(15, 35, 26);
   --header-height: var(--nav-h);
   --f-display: "RZ Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -23,7 +23,7 @@ html[data-theme="dark"] {
   --line: rgba(244, 240, 229, .82);
   --muted: rgba(244, 240, 229, .62);
   --panel: #0f231a;
-  --shadow: rgba(0, 0, 0, .32);
+  --shadow: rgba(15, 35, 26);
 }
 
 * { box-sizing: border-box; }

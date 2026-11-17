@@ -46,7 +46,7 @@ h3{
 p{
     font-family: var(--txt-body);
     font-size: var(--font-size-info);
-    line-height: 2;
+    line-height: 1.5;
     font-weight: 100;
     color: var(--color-claro);
     margin: 0;

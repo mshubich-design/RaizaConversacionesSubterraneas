@@ -2,9 +2,9 @@
 (function () {
   var root = document.documentElement, KEY = 'raiza-intro';
   var CSS = '' +
-  '#rzIntro{position:fixed;inset:0;z-index:99999;background:#19271e;color:#f4f0e5;overflow:hidden;opacity:0;transition:opacity .4s ease;' +
+  '#rzIntro{position:fixed;inset:0;z-index:99999;background:#19271e;color:#f4f0e5;overflow:hidden;opacity:1;transition:opacity .4s ease;' +
     '--pu:min(calc(100vw / 2576),calc(100vh / 1449));font-family:"RZ Text","Helvetica Neue",Helvetica,Arial,sans-serif}' +
-  '#rzIntro.on{opacity:1}#rzIntro.off{opacity:0;pointer-events:none}' +
+  '#rzIntro.off{opacity:0;pointer-events:none}' +
   '#rzIntro .st{position:absolute;left:50%;top:50%;width:calc(2576 * var(--pu));height:calc(1449 * var(--pu));transform:translate(-50%,-50%)}' +
   '#rzIntro .a{position:absolute;margin:0}' +
   '#rzIntro .ttl{left:calc(98 * var(--pu));top:calc(146 * var(--pu));width:calc(780 * var(--pu));font-family:"RZ Display","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:calc(46 * var(--pu));line-height:calc(55 * var(--pu));text-transform:uppercase;letter-spacing:-.012em}' +
@@ -20,23 +20,19 @@
   '#rzIntro .x:after{transform:rotate(-45deg)}' +
   '#rzIntro .x:hover{opacity:.7}#rzIntro .x:focus-visible{outline:2px solid #738d66;outline-offset:4px}' +
   '#rzIntro .m{display:none}' +
-  /* móvil / vertical: columna legible */
+  /* móvil / vertical: mismo diseño en formato vertical (339 × 495) */
+  '#rzIntro .sm{display:none}' +
   '@media (max-width:900px),(max-aspect-ratio:1/1){' +
-    '#rzIntro{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}' +
-    '#rzIntro .st{display:none}#rzIntro .m{display:block;position:relative;padding:max(64px,9vh) 24px 56px;max-width:560px;margin:0 auto}' +
-    '#rzIntro .m .ttl{position:static;width:auto;font-size:clamp(23px,6.4vw,34px);line-height:1.2;margin:0 0 30px}' +
-    '#rzIntro .m h3{font-size:18px;line-height:1.3;margin:0 0 8px}' +
-    '#rzIntro .m p.t{font-size:15.5px;line-height:1.5;margin:0}' +
-    '#rzIntro .m section{margin:0 0 28px}' +
-    '#rzIntro .m .ph{position:static;width:100%;height:auto;aspect-ratio:2/3;max-height:62vh;margin:6px 0 30px}' +
-    '#rzIntro .m .row{display:flex;align-items:center;gap:14px;margin:0 0 28px}' +
-    '#rzIntro .m .row .ic{width:84px;flex:none}' +
-    '#rzIntro .m .row .ln{flex:1;height:2px}' +
-    '#rzIntro .m .row.r{flex-direction:row-reverse}' +
-    '#rzIntro .m .row .ln{position:relative}' +
-    '#rzIntro .m .row .ln:before{content:"";position:absolute;left:-1px;top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:11px solid #f4f0e5}' +
-    '#rzIntro .m .row.r .ln:before{left:auto;right:-1px;border-right:0;border-left:11px solid #f4f0e5}' +
-    '#rzIntro .x{right:14px;top:12px;width:40px;height:40px}' +
+    '#rzIntro{--vu:min(calc(100vw / 339),calc(100vh / 495))}' +
+    '#rzIntro .st{display:none}' +
+    '#rzIntro .sm{display:block;position:absolute;left:50%;top:50%;width:calc(339 * var(--vu));height:calc(495 * var(--vu));transform:translate(-50%,-50%)}' +
+    '#rzIntro .sm .ttl{left:calc(88 * var(--vu));top:calc(31 * var(--vu));width:calc(235 * var(--vu));font-size:calc(9.7 * var(--vu));line-height:calc(11.6 * var(--vu))}' +
+    '#rzIntro .sm h3{font-size:calc(6.6 * var(--vu));line-height:calc(8.2 * var(--vu))}' +
+    '#rzIntro .sm p.t{font-size:calc(5.7 * var(--vu));line-height:calc(7.1 * var(--vu));letter-spacing:0}' +
+    '#rzIntro .sm .ph{left:calc(88 * var(--vu));top:calc(117 * var(--vu));width:calc(162 * var(--vu));height:calc(298 * var(--vu))}' +
+    '#rzIntro .sm .ln{height:max(1px,calc(.9 * var(--vu)))}' +
+    '#rzIntro .sm .hd{border-top-width:calc(3 * var(--vu));border-bottom-width:calc(3 * var(--vu))}' +
+    '#rzIntro .x{right:calc(14 * var(--vu));top:calc(14 * var(--vu));width:calc(18 * var(--vu));height:calc(18 * var(--vu));min-width:22px;min-height:22px}' +
   '}' +
   'html.rzi-lock,html.rzi-lock body{overflow:hidden!important}';
 
@@ -46,7 +42,9 @@
     t3: 'El enfoque principal es la relación entre<br>hongos y árboles mediante las micorrizas,<br>donde ambos organismos intercambian<br>recursos esenciales para su desarrollo.',
     t4: 'RAIZA busca hacer visible el mundo<br>subterráneo del bosque, explorando<br>las redes de micelio, las asociaciones<br>entre organismos y los procesos<br>de descomposición que mantienen<br>vivo el ecosistema.'
   };
+  L.s1=L.t1.replace(/<br>/g,' '); L.s2=L.t2.replace(/<br>/g,' '); L.s3=L.t3.replace(/<br>/g,' '); L.s4=L.t4.replace(/<br>/g,' ');
   var TITLE = 'Explora las conversaciones<br>subterráneas del <b>Desierto<br>de los Leones</b> a través<br>de sus <b>hongos</b>, sus <b>funciones<br>y las relaciones</b> que<br>establecen con los árboles<br>de este <b>bosque.</b>';
+  var TITLE_S = 'Explora las conversaciones<br>subterráneas del <b>Desierto<br>de los Leones</b> a través de sus <b>hongos</b>,<br>sus <b>funciones y las relaciones</b><br>que establecen con los árboles<br>de este <b>bosque.</b>';
   var TITLE_M = 'Explora las conversaciones subterráneas del <b>Desierto de los Leones</b> a través de sus <b>hongos</b>, sus <b>funciones y las relaciones</b> que establecen con los árboles de este <b>bosque.</b>';
 
   function html() {
@@ -70,15 +68,24 @@
       '<div class="a ln" style="left:calc(612 * var(--pu));top:calc(1027 * var(--pu));width:calc(480 * var(--pu))"></div>' +
       '<div class="a hd" style="left:calc(588 * var(--pu));top:calc(1017 * var(--pu));border-right:calc(24 * var(--pu)) solid #f4f0e5"></div>' +
     '</div>' +
-    '<div class="m">' +
-      '<h1 class="a ttl">' + TITLE_M + '</h1>' +
-      '<section><h3>1. Un ecosistema específico</h3><p class="t">' + L.t1.replace(/<br>/g, ' ') + '</p></section>' +
-      '<div class="row"><img class="ic" src="img/popup/hongo.png" alt=""><div class="ln"></div></div>' +
-      '<img class="ph" src="img/popup/bosque.jpg" alt="Tronco cubierto de musgo en el Desierto de los Leones">' +
-      '<section><h3>2. La Wood Wide Web</h3><p class="t">' + L.t2.replace(/<br>/g, ' ') + '</p></section>' +
-      '<div class="row r"><img class="ic" src="img/popup/raices.png" alt=""><div class="ln"></div></div>' +
-      '<section><h3>3. La relación hongo-árbol</h3><p class="t">' + L.t3.replace(/<br>/g, ' ') + '</p></section>' +
-      '<section><h3>4. Lo que ocurre bajo nuestros pies</h3><p class="t">' + L.t4.replace(/<br>/g, ' ') + '</p></section>' +
+    '<div class="sm">' +
+      '<h1 class="a ttl">' + TITLE_S + '</h1>' +
+      '<div class="a" style="left:calc(28 * var(--vu));top:calc(118 * var(--vu));width:calc(60 * var(--vu))"><h3>1. Un ecosistema específico</h3></div>' +
+      '<p class="a t" style="left:calc(28 * var(--vu));top:calc(147 * var(--vu));width:calc(58 * var(--vu))">' + L.s1 + '</p>' +
+      '<img class="a ph" src="img/popup/bosque.jpg" alt="Tronco cubierto de musgo en el Desierto de los Leones">' +
+      '<div class="a" style="left:calc(262 * var(--vu));top:calc(118 * var(--vu));width:calc(62 * var(--vu))"><h3>2. La Wood Wide Web</h3></div>' +
+      '<p class="a t" style="left:calc(262 * var(--vu));top:calc(147 * var(--vu));width:calc(62 * var(--vu))">' + L.s2 + '</p>' +
+      '<img class="a ic" src="img/popup/raices.png" alt="" style="left:calc(276 * var(--vu));top:calc(214 * var(--vu));width:calc(44 * var(--vu))">' +
+      '<div class="a ln" style="left:calc(214 * var(--vu));top:calc(228 * var(--vu));width:calc(50 * var(--vu))"></div>' +
+      '<div class="a hd" style="left:calc(262 * var(--vu));top:calc(225 * var(--vu));border-left:calc(6 * var(--vu)) solid #f4f0e5"></div>' +
+      '<div class="a" style="left:calc(262 * var(--vu));top:calc(267 * var(--vu));width:calc(62 * var(--vu))"><h3>3. La relación hongo-árbol</h3></div>' +
+      '<p class="a t" style="left:calc(262 * var(--vu));top:calc(293 * var(--vu));width:calc(62 * var(--vu))">' + L.s3 + '</p>' +
+      '<div class="a" style="left:calc(262 * var(--vu));top:calc(375 * var(--vu));width:calc(62 * var(--vu))"><h3>4. Lo que ocurre bajo nuestros pies</h3></div>' +
+      '<p class="a t" style="left:calc(262 * var(--vu));top:calc(402 * var(--vu));width:calc(62 * var(--vu))">' + L.s4 + '</p>' +
+      '<img class="a ic" src="img/popup/hongo.png" alt="" style="left:calc(24 * var(--vu));top:calc(342 * var(--vu));width:calc(28 * var(--vu))">' +
+      '<div class="a ln" style="left:calc(68 * var(--vu));top:calc(372 * var(--vu));width:calc(60 * var(--vu))"></div>' +
+      '<div class="a hd" style="left:calc(62 * var(--vu));top:calc(369 * var(--vu));border-right:calc(6 * var(--vu)) solid #f4f0e5"></div>' +
+    '</div>' +
     '</div>';
   }
 
@@ -97,7 +104,7 @@
 
   function close() {
     box.classList.remove('on'); box.classList.add('off');
-    root.classList.remove('rzi-lock');
+    root.classList.remove('rzi-lock'); root.classList.remove('rzl-lock');
     document.removeEventListener('keydown', key);
     setTimeout(function () { if (box.parentNode) box.parentNode.removeChild(box); if (st.parentNode) st.parentNode.removeChild(st); }, 450);
   }
