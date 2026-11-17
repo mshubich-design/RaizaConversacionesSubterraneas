@@ -145,9 +145,13 @@
       .attr("class", "node-block")
       .attr("aria-label", d => `Ver información de ${d.name}`)
       .on("click", (event, d) => {
-        if (event.defaultPrevented) return;
-        selectNode(d.id);
-      });
+    if (event.defaultPrevented) return;
+
+    nodeSelection.classed("is-enlarged", false);
+    d3.select(event.currentTarget).classed("is-enlarged", true);
+
+    selectNode(d.id);
+});
 
     nodeSelection.append("span").attr("class", "node-dot");
     nodeSelection.append("img")
@@ -200,6 +204,21 @@
     selectedId = number(id);
     const fungus = graphNodes.find(node => node.id === selectedId);
     if (!fungus) return;
+      let detailImage = document.getElementById("detailImageMobile");
+
+  if (!detailImage) {
+    detailImage = document.createElement("img");
+    detailImage.id = "detailImageMobile";
+    detailImage.className = "detail-image-mobile";
+
+    detailPanel.insertBefore(
+      detailImage,
+      detailPanel.querySelector(".detail-kicker")
+    );
+  }
+
+  detailImage.src = fungus.image;
+  detailImage.alt = fungus.name;
     document.getElementById("detailName").textContent = fungus.name;
     document.getElementById("detailDescription").textContent = fungus.description || "Sin descripción disponible.";
     document.getElementById("detailHabitat").textContent = fungus.habitat;
