@@ -5,11 +5,11 @@ window.RAIZA_ART = {
           <defs>
             <linearGradient id="rzFadeG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="573">
               <stop offset="0" stop-color="#fff"/><stop offset=".22" stop-color="#fff"/>
-              <stop offset=".5" stop-color="#7a7a7a"/><stop offset=".78" stop-color="#3c3c3c"/><stop offset="1" stop-color="#1e1e1e"/>
+              <stop offset=".5" stop-color="#7a7a7a"/><stop offset=".78" stop-color="#3c3c3c"/><stop offset="1" stop-color="#0f231a"/>
             </linearGradient>
             <linearGradient id="rzGenG" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="614"><stop offset="0" style="stop-color:var(--ink)"/><stop offset=".22" style="stop-color:var(--ink)"/><stop offset=".5" style="stop-color:var(--ink);stop-opacity:.48"/><stop offset=".78" style="stop-color:var(--ink);stop-opacity:.24"/><stop offset="1" style="stop-color:var(--ink);stop-opacity:.12"/></linearGradient>
           <linearGradient id="rzEdgeG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="228" y2="0">
-              <stop offset="0" stop-color="#000"/><stop offset=".07" stop-color="#fff"/><stop offset=".93" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+              <stop offset="0" stop-color="#0f231a"/><stop offset=".07" stop-color="#fff"/><stop offset=".93" stop-color="#fff"/><stop offset="1" stop-color="#0f231a"/>
             </linearGradient>
             <mask id="rzEdge" maskUnits="userSpaceOnUse" x="0" y="0" width="228" height="573"><rect width="228" height="573" fill="url(#rzEdgeG)"/></mask>
           </defs>
